@@ -1,3 +1,58 @@
+/* CSS BY Alex Armstrong */
+
+/* IMPORTED FONTS*/
+/* IMPORT "INTER" FROM GOOGLE FONTS"
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
 :root {
     --blue: #007BFF;
     --red: #FF4500;
@@ -6,6 +61,10 @@
     --charcoal: #333333;
     --font: "Inter", sans-serif;
 }
+
+/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 html, body {
     overflow-x: hidden; 
@@ -77,16 +136,20 @@ header > .top-bar {
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%; 
+    left: 0;
     background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    list-style: none;
 }
 
-.dropdown-content > li {    /* FIX ME DROP DOWN */
+.dropdown-content > li { 
     padding: 1rem;
 }
 
 .drop-down:hover .dropdown-content {
   display: block;
-  color: var(--white);
 }
 
 
@@ -140,9 +203,10 @@ header > .top-bar {
 
 main > h2 {
     padding: 0 2rem;
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 1rem;
 }
 
 main > p {
@@ -164,7 +228,7 @@ main > p {
 .offer > h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: left;
+    align-self: flex-start;
 }
 
 .card {
@@ -448,6 +512,6 @@ textarea {
         width: 100%; 
         padding: 1rem;
         margin: 0 auto;
-        height: 40%; 
+        height: 50%; 
     }
 }
