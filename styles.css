@@ -62,10 +62,6 @@ table {
     --font: "Inter", sans-serif;
 }
 
-/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
 html, body {
     overflow-x: hidden; 
     box-sizing: border-box; 
@@ -148,10 +144,17 @@ header > .top-bar {
     padding: 1rem;
 }
 
-.drop-down:hover .dropdown-content {
-  display: block;
-}
+@media all and (max-width: 799px) {
+    .drop-down:hover .dropdown-content {
+    display: block;
+    color: var(--blue);
+    }
 
+    ul > li > a {
+        text-decoration: none;
+        color: var(--white);
+    }
+}
 
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -261,12 +264,17 @@ img, table, .container {
 .proven > h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-left: 0.25rem;
+    padding-left: 1rem;
+}
+
+.proven > p {
+    padding: 1rem;
 }
 
 .profits > h3 {
     font-size: 1.25rem;
     font-weight: bold;
+    padding: 1rem;
 }
 
 .profits > table {
@@ -364,6 +372,11 @@ footer {
 footer > h2 {
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 1rem;
+}
+
+footer > p {
+    padding: 1rem;
 }
 
 form {
@@ -421,6 +434,11 @@ textarea {
 
 .page-info {
     text-align: center;
+    padding: 1rem;
+}
+
+.page-info > p {
+    padding: 0.25rem;
 }
 
 .contact-us-tel {
@@ -433,22 +451,21 @@ textarea {
     #results {
         grid-template-columns: 1fr 1fr;
     }
+
     .results-container {
         flex-direction: row;
         justify-content: space-between;
     }
+
     .results-table {
         width: 50%;
     }
+
     .bar-chart {
         width: 50%;
     }
 
     .drop-down > img {
-        display: none;
-    }
-
-    .drop-down:hover {
         display: none;
     }
 
@@ -513,5 +530,26 @@ textarea {
         padding: 1rem;
         margin: 0 auto;
         height: 50%; 
+    }
+
+    .drop-down > img {
+        display: none;
+    }
+
+    .dropdown-content {
+        display: flex;
+        color: var(--blue);
+        position:relative;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .dropdown-content > li {
+        list-style: none;
+    }
+
+    li > a {
+        text-decoration: none;
+        color: var(--blue);
     }
 }
